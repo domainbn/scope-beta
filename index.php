@@ -13,6 +13,8 @@
     echo "Connected successfully";
 
 
-    echo 'test';
+    echo 'Website works';
+    echo $conn;
+    echo $servername;
     
 ?>
