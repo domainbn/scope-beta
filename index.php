@@ -14,7 +14,7 @@
 
 
     echo 'Website works';
-    echo $conn;
-    echo $servername;
+//    echo $conn;
+//    echo $servername;
     
 ?>
