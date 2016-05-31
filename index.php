@@ -27,5 +27,21 @@
     }
 
     //Additionals
+    $sql =<<<EOF
+      SELECT * from SCP_USER;
+EOF;
+
+   $ret = pg_query($db, $sql);
+   if(!$ret){
+      echo pg_last_error($db);
+      exit;
+   } 
+   while($row = pg_fetch_row($ret)){
+      echo "ID = ". $row[0] . "\n";
+      echo "USERNAME = ". $row[1] ."\n";
+      echo "EMAIL = ". $row[2] ."\n";
+   }
+   echo "Operation done successfully\n";
+   pg_close($db);
     
 ?>
