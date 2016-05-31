@@ -1,28 +1,19 @@
 <?php
-//    $host = "ec2-50-17-255-6.compute-1.amazonaws.com";
-//    $username = "pmhppusmuzyuqu";
-//    $password = "9JzIAdE8ZTJa8MCRTYYZ6_XXVC";
-//    $database = "df0h35apt2cc0q";
-//
-//    $con = mysqli_connect($servername,$username,$password,$database);
-//
-//// Check connection
-//if (mysqli_connect_errno())
-//  {
-//  echo "Failed to connect to MySQL: " . mysqli_connect_error();
-//  }
+    $scp_server = "ec2-50-17-255-6.compute-1.amazonaws.com";
+    $scp_username = "pmhppusmuzyuqu";
+    $scp_password = "9JzIAdE8ZTJa8MCRTYYZ6_XXVC";
+    $scp_database = "df0h35apt2cc0q";
+    $scp_portno = "5432";
 
-    $host        = "host=ec2-50-17-255-6.compute-1.amazonaws.com";
-    $port        = "port=5432";
-   $dbname      = "dbname=df0h35apt2cc0q";
-   $credentials = "user=pmhppusmuzyuqu password=9JzIAdE8ZTJa8MCRTYYZ6_XXVC";
+    $host = "host=$scp_server";
+    $port = "port=$scp_port";
+    $dbname = "dbname=$scp_database";
+    $credentials = "user=$scp_username password=$scp_password";
 
    $db = pg_connect( "$host $port $dbname $credentials"  );
-   if(!$db){
+   if (!$db) {
       echo "Error : Unable to open database\n";
    } else {
-      echo "Opened database successfully\n";
+      echo "Connection success";
    }
-
-    echo 'test';
 ?>
