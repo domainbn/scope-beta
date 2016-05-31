@@ -3,7 +3,7 @@
     $scp_username = "pmhppusmuzyuqu";
     $scp_password = "9JzIAdE8ZTJa8MCRTYYZ6_XXVC";
     $scp_database = "df0h35apt2cc0q";
-    $scp_portno = "5432";
+    $scp_port = "5432";
 
     $host = "host=$scp_server";
     $port = "port=$scp_port";
