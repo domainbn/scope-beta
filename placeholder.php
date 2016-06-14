@@ -17,34 +17,42 @@
         return $db;
     }
     //Try Connection
-    
+    function Conn() {
     $db = dbConn();
 
-    if (!$db) {
-        echo "Error : Unable to open database\n";
-    } else {
-        echo "Connection success";
+        if (!$db) {
+            echo "Error : Unable to open database\n";
+        } else {
+            echo "<p>Connection success</p>";        
+        }
+        return $db;
     }
-
-    //Additionals
-//    $sql =<<<EOF
-//      SELECT * from SCP_USER;
-//EOF;
 
     $sql = "SELECT * from SCP_USER";
 
-   $ret = pg_query($db, $sql);
-   if (!$ret) {
-      echo pg_last_error($db);
-      exit;
-   } 
+    $ret = pg_query($db, $sql);
+    if (!$ret) {
+        echo pg_last_error($db);
+        exit;
+    } 
 
-   while($row = pg_fetch_row($ret)){
-      echo "ID = ". $row[0] . "<br>";
-      echo "USERNAME = ". $row[1] ."<br>";
-      echo "EMAIL = ". $row[2] ."";
-   }
-   echo "Operation done successfully\n";
+    echo "<table>";
+    echo "<th>
+        <td>1</td>
+        <td>2</td>
+        <td>3</td>
+    </th>";
+    while ($row = pg_fetch_row($ret)) {
+        echo "<tr>
+            <td>. $row[0] .</td>
+            <td>. $row[1] .</td>
+            <td>. $row[2] .</td>
+        </tr>";
+    }
+
+    echo "</table>";
+
+  
    pg_close($db);
     
 ?>
