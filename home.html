@@ -1,13 +1,40 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>scope_nightly_0.1</title>
+        <title>Scope (Beta)</title>
     </head>
     <body>
+        <h1>Scope Server</h1>        
         <form action="push.php" method="post">
             <h3>Var:</h3>
             <input type="text" name="post_var">
             <input type="submit">
         </form>
+        
+        <hr>
+        
+        <p>Click the button to get your coordinates.</p>
+
+<button onclick="getLocation()">Try It</button>
+
+<p id="demo"></p>
+
+<script>
+var x = document.getElementById("demo");
+
+function getLocation() {
+    if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(showPosition);
+    } else {
+        x.innerHTML = "Geolocation is not supported by this browser.";
+    }
+}
+
+function showPosition(position) {
+    x.innerHTML = "Latitude: " + position.coords.latitude +
+    "<br>Longitude: " + position.coords.longitude;
+}
+</script>
+
     </body>
 </html>
