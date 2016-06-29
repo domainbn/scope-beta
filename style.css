@@ -85,11 +85,15 @@ button:active {
 
 .scp-mid {
     margin-top: 56px;
-    padding-top: 8px;
+/*    padding-top: 8px;*/
 }
 .scp-btm {
     height: 64px;
     background: orange;
+}
+
+.scp-feed {
+    margin-top: 16px;
 }
 
 .scp-post {
