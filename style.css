@@ -1,9 +1,12 @@
 html, body {
     margin: 0;
     font-family: 'Roboto', sans-serif;
-    background: #fff;
-/*    color: rgba(0,0,0,.87);*/
+    background: #FFF8E1;
     color: #757575;
+}
+
+input {
+    font-family: 'Roboto', sans-serif;
 }
 
 a {
@@ -11,12 +14,22 @@ a {
     color: white;
 }
 
-h3 {
+h3, p {
     margin-top: 0;
-    font-size: 24px;
 }
 
-button {
+h3 {    
+    font-size: 20px;
+    margin-bottom: 8px;
+    color: #212121;
+}
+
+p {
+    font-size: 14px;
+}
+
+
+input[type="button" i], input[type="submit" i], input[type="reset" i], input[type="file" i]::-webkit-file-upload-button, button {
     background: #FA5153;
     color: white;
     padding: 8px 12px;
@@ -83,7 +96,7 @@ button:active {
     width: 85%;
     margin: 0 auto 16px auto;
     background: #fff;    
-    padding: 8px 16px;
+    padding: 16px;
 /*    border-bottom: 1px solid #999999;*/
 }
 
