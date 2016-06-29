@@ -22,16 +22,25 @@
                 <div class="scp-feed">
                     <div class="scp-post">
                         <h3>Variable Push</h3>
+<!--
                         <p>
                             <form action="push.php" method="post">            
                                 <input type="text" name="post_var">
                                 <input type="submit">
                             </form>
                         </p>
-                    
-                        <p id="ajaxVar"></p>
+-->
+                        <p id="varo">(if it works, this chould change)</p>
+<!--                        <input type="text" name="post_var" id="varia">-->
+                        <button onclick="push()">Push</button>                        
+                        
                         <script>
+                            var varo = document.getElementById("varo");
+//                            var varia = document.getElementById("varia");
                             
+                            function push() {
+                            varo.innerHTML = "It works!";
+                            }
                         </script>
                     </div>
                 </div>                
@@ -66,12 +75,15 @@
                 <p>
                     <input type="file" capture="camera" accept="image/*" id="cameraInput" name="cameraInput">
                 </p>
+                
+                
             </div>
             
             <div class="scp-post">
                 <h3>Title</h3>
                 <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
             </div>
+            
             <div class="scp-post">
                 <h3>Title</h3>
                 <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
