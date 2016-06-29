@@ -1,12 +1,15 @@
 html, body {
     margin: 0;
     font-family: Lato;
+    background: #eee;
 }
 
 .scp-dash {
-    width: 800px;
+    width: 100%;
     margin: 0 auto;
 }
+
+
 
 .scp-top, .scp-mid, .scp-btm {
     float: left;
@@ -14,16 +17,31 @@ html, body {
 }
 
 .scp-top {
-    position: fixed;
-    top: 0;
     background: #333;
-    height: 72px;
+    height: 48px;
     color: #fff;
 }
 
+.scp-hdr {
+    text-align: center;
+}
+
+.scp-hdr h2 {
+    line-height: 48px;
+    margin: 0;
+    padding: 0;
+}
+
+.scp-hdr span {
+    background: #aaa;
+    color: #333;
+    font-size: 9px;
+    padding: 2px;
+    border-radius: 3px;
+}
+
 .scp-mid {
-    height: 600px;
-    background: pink;
+    padding-top: 8px;
 }
 .scp-btm {
     height: 64px;
@@ -31,8 +49,11 @@ html, body {
 }
 
 .scp-post {
-    float: left;
-    width: 100%;
+    width: 80%;
+    margin: 0 auto 16px auto;
+    background: #fff;    
+    padding: 8px 16px;
+    border-radius: 3px;
 }
 
 .scp-post-title {

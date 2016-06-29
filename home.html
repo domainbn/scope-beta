@@ -6,52 +6,54 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
     </head>
     <body>
-<!--
-        <h1>Scope Server</h1>       
-        <hr>
-        <h2>Variable push test:</h2>
-        <form action="push.php" method="post">            
-            <input type="text" name="post_var">
-            <input type="submit">
-        </form>
-        
-        <hr>
-        
-        <h2>Geolocation test:</h2>
-        <button onclick="getLocation()">Get Location</button>
-        <p id="demo"></p>
-
-            <script>
-            var x = document.getElementById("demo");
-
-            function getLocation() {
-                if (navigator.geolocation) {
-                    navigator.geolocation.getCurrentPosition(showPosition);
-                } else {
-                    x.innerHTML = "Geolocation is not supported by this browser.";
-                }
-            }
-
-            function showPosition(position) {
-                x.innerHTML = "Latitude: " + position.coords.latitude +
-                "<br>Longitude: " + position.coords.longitude;
-            }
-            </script>
--->
-
         <div class="scp-dash">
             <div class="scp-top">
-                <div class="scp-hdr"></div>
-            </div>
-            <div class="scp-mid">
-                <div class="scp-feed">
-                    <div class="scp-post">
-                        <div class="scp-post-title"></div>
-                        <div class="scp-post-body"></div>
-                    </div>
+                <div class="scp-hdr">
+                    <h2>scope <span>beta</span></h2>
                 </div>
             </div>
-            <div class="scp-btm"></div>
+            <div class="scp-mid">
+                
+                <!--FEED-->
+                <div class="scp-feed">
+                    <div class="scp-post">
+                        <h3>Variable Push</h3>
+                        <p>
+                            <form action="push.php" method="post">            
+                                <input type="text" name="post_var">
+                                <input type="submit">
+                            </form>
+                        </p>
+                    </div>
+                </div>                
+                <div class="scp-post">
+                    <h3>Geolocation Fetch</h3>
+                    <p id="demo"></p>
+                    <p>
+                        <button onclick="getLocation()">Get Location</button>
+                        
+
+                        <script>
+                        var x = document.getElementById("demo");
+
+                        function getLocation() {
+                            if (navigator.geolocation) {
+                                navigator.geolocation.getCurrentPosition(showPosition);
+                            } else {
+                                x.innerHTML = "Geolocation is not supported by this browser.";
+                            }
+                        }
+
+                        function showPosition(position) {
+                            x.innerHTML = "Latitude: " + position.coords.latitude +
+                            "<br>Longitude: " + position.coords.longitude;
+                        }
+                        </script>
+                    </p>
+                </div>
+                
+            </div>
+<!--            <div class="scp-btm"></div>-->
         </div>
     </body>
 </html>
