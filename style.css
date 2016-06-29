@@ -10,8 +10,24 @@ html, body {
 
 .scp-top, .scp-mid, .scp-btm {
     float: left;
-    height: 300px;
     width: 100%;
+}
+
+.scp-top {
+    position: fixed;
+    top: 0;
+    background: #333;
+    height: 72px;
+    color: #fff;
+}
+
+.scp-mid {
+    height: 600px;
+    background: pink;
+}
+.scp-btm {
+    height: 64px;
+    background: orange;
 }
 
 .scp-post {
