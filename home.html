@@ -4,7 +4,7 @@
         <title>Scope (Beta)</title>
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="style.css" />        
-        <link href="https://fonts.googleapis.com/css?family=Assistant" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Roboto:300" rel="stylesheet">
         <link rel="icon" href="https://www.gstatic.com/images/branding/product/ico/google_fonts_lodp.ico" type="image/x-icon">
     </head>
     <body>
@@ -20,6 +20,12 @@
                 
                 <!--FEED-->
                 <div class="scp-feed">
+                    
+                    <div id="xcore" class="scp-post">
+                        
+                    </div>
+                    
+                    
                     <div class="scp-post">
                         <h3>Variable Push</h3>
 <!--
@@ -31,15 +37,18 @@
                         </p>
 -->
                         <p id="varo">(if it works, this chould change)</p>
-<!--                        <input type="text" name="post_var" id="varia">-->
                         <button onclick="push()">Push</button>                        
                         
-                        <script>
+                        <script type="text/javascript">
                             var varo = document.getElementById("varo");
-//                            var varia = document.getElementById("varia");
+                            var xcore = document.getElementById("xcore");
+
+                            
+                            var scppost = "";
                             
                             function push() {
-                            varo.innerHTML = "It works!";
+                                varo.innerHTML = "It works!";
+                                xcore.innerHTML = "<h3>Title</h3><p>Notification?</p>";
                             }
                         </script>
                     </div>
